@@ -1,0 +1,32 @@
+{
+	"name": "siw-cookie-notice",
+	"version": "1.0.0",
+	"license": "GPL-2.0-or-later",
+	"description": "Cookie notice voor website SIW",
+	"repository": "https://github.com/siwvolunteers/siw-cookie-notice",
+	"scripts": {
+		"update": "npm update && npm run frontend-dependencies",
+		"build": "npm run scss",
+		"scss": "sass --update --no-source-map assets/scss:assets/css",
+		"frontend-dependencies": "node ./node_modules/frontend-dependencies/index.js",
+		"postinstall": "npm run frontend-dependencies"
+	},
+	"browserslist": [
+		">0.5% in NL"
+	],
+	"dependencies": {},
+	"devDependencies": {
+		"frontend-dependencies": "1.*",
+		"sass": "^1.30.0"
+	},
+	"frontendDependencies": {
+		"target": "assets/vendor",
+		"packages": {
+			"js-cookie": {
+				"version": "^2.2.1",
+				"src": "src/js.cookie.js",
+				"namespaced": true
+			}
+		}
+	}
+}
