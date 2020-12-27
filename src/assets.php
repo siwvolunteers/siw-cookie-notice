@@ -12,8 +12,24 @@ class Assets {
 
 	/**
 	 * Versie van JS Cookie
+	 * 
+	 * @var string
 	 */
 	const JSCOOKIE_VERSION = '2.2.1';
+
+	/**
+	 * Cookienaam
+	 * 
+	 * @var string
+	 */
+	const COOKIE_NAME = 'siw_cookie_consent';
+
+	/**
+	 * Levensduur van cookie
+	 * 
+	 * @var int
+	 */
+	const COOKIE_LIFESPAN = 365;
 
 	/**
 	 * Init
@@ -35,8 +51,8 @@ class Assets {
 			'siw_cookie_notice',
 			[
 				'cookie' => [
-					'name'    => 'siw_cookie_consent',
-					'expires' => 365,
+					'name'    => self::COOKIE_NAME,
+					'expires' => self::COOKIE_LIFESPAN,
 					'value'   => 1,
 				],
 				'notice_id'   => Notice::NOTICE_ID,

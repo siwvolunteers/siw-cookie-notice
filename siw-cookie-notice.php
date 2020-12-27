@@ -16,14 +16,16 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Plugin Name:       SIW Cookie Notice
  * Plugin URI:        https://github.com/siwvolunteers/siw-cookie-notice
  * Description:       Cookie notice
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            SIW Internationale Vrijwilligersprojecten
  * Author URI:        https://www.siw.nl
  * Text Domain:       siw-cookie-notice
+ * Domain Path:       /languages
  * License:           GPLv2 or later
  * Requires at least: 5.5
  * Requires PHP:      7.4
  */
 
 require_once dirname( __FILE__ ) . '/bootstrap.php';
-add_action( 'siw_register_extensions', [ __NAMESPACE__ . '\\'.'Bootstrap', 'init' ]);
+define( 'SIW_COOKIE_NOTICE_PLUGIN_FILE', __FILE__ );
+add_action( 'siw_register_extensions', [ __NAMESPACE__ . '\\'.'Bootstrap', 'init' ] );
